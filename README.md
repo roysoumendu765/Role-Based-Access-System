@@ -20,3 +20,12 @@ Role Bases Access System using React.js.
 4. **Custom API Simulation (Optional):**
     - Mock API calls for CRUD operations on users and roles.
     - Simulate server responses to validate functionality.
+
+# To Run the Project
+1) Clone the Project
+2) Go to the root directory of the project
+3) `npm install` in the terminal
+4) `npm start`
+
+# Deployed at Vercel:
+Link: `https://role-based-access-system-liart.vercel.app/`
