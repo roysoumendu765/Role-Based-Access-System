@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import UserList from "./components/UserList";
+import RoleList from "./components/RoleList";
+import { UserProvider } from "./contexts/UserContext";
+import { RoleProvider } from "./contexts/RoleContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import Header from "./components/Header"; 
+import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <UserProvider>
+        <RoleProvider>
+          <Header /> 
+          <div className="container mx-auto mt-6">
+            <UserList />
+            <hr className="my-6" />
+            <RoleList />
+          </div>
+          <Footer />
+        </RoleProvider>
+      </UserProvider>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
